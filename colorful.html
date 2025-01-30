@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Static Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script defer src="https://unpkg.com/framer-motion@latest/dist/framer-motion.umd.js"></script>
+    <style>
+        @keyframes gradientBg {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animated-bg {
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+            background-size: 400% 400%;
+            animation: gradientBg 6s ease infinite;
+        }
+    </style>
+</head>
+<body class="animated-bg min-h-screen flex flex-col justify-center items-center text-white text-center p-5">
+    <h1 class="text-4xl font-bold animate-pulse">Welcome to My Colorful Website</h1>
+    
+    <p class="text-lg mt-3 opacity-90">Enjoy smooth animations and vibrant colors!</p>
+    
+    <lottie-player 
+        src="https://assets5.lottiefiles.com/packages/lf20_tutvdkgq.json" 
+        background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay>
+    </lottie-player>
+    
+    <button class="mt-5 px-6 py-3 bg-purple-600 hover:bg-purple-800 transition-all rounded-lg shadow-lg">
+        Click Me!
+    </button>
+</body>
+</html>
